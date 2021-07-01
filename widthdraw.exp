@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn sh widthdrawfromvali.sh
+set pass "Yourpassinhere" 
+
+
+expect "Enter keyring passphrase:"
+send "$pass\r"
+expect eof
