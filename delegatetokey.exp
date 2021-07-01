@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn sh delegatetovali.sh 
+set pass "Yourpassgoesinhere" 
+
+
+expect "Enter keyring passphrase:"
+send "$pass\r"
+expect eof
